@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,14 +7,16 @@ import About from './pages/About'
 const Initial = () => {
    return(
       <Switch>
-         <Route exatc path="/">
+         <Route exact path="/">
             <Home />
          </Route>
          <Route path="/sobre">
             <About />
          </Route>
          <Route path="*">
-            <h2><strong>ERROR 404</strong> Conteudo não encontrado</h2>
+            <h2><strong>ERROR 404</strong>- Página não encontrada</h2>
+            <br/>
+            <Link to="/">Voltar para a HOME</Link>
          </Route>
       </Switch>
    )
