@@ -3,6 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 
 import Home from './pages/Home'
 import About from './pages/About'
+import SignIn from './pages/SignIn'
 
 const Initial = () => {
    return(
@@ -12,6 +13,9 @@ const Initial = () => {
          </Route>
          <Route path="/sobre">
             <About />
+         </Route>
+         <Route path="/signin">
+            <SignIn></SignIn>
          </Route>
          <Route path="*">
             <h2><strong>ERROR 404</strong>- Página não encontrada</h2>
